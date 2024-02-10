@@ -40,11 +40,14 @@ public class Knight : MonoBehaviour
             destination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
         animator.SetFloat("Movement", movement.magnitude);
+<<<<<<< HEAD
 
         if (Input.GetMouseButtonDown(1) && !clickingOnSelf)
         {
             animator.SetTrigger("Attack");
         }
+=======
+>>>>>>> Week-5-Task-1b
     }
    private void OnMouseDown()
    {
@@ -73,5 +76,8 @@ public class Knight : MonoBehaviour
              animator.SetTrigger("TakeDamage");
         }
    }
+<<<<<<< HEAD
 
+=======
+>>>>>>> Week-5-Task-1b
 }
