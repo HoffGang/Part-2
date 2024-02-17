@@ -53,6 +53,8 @@ public class ReplacementKnight : MonoBehaviour
         }
 
         animator.SetFloat("Movement", movement.magnitude);
+
+        PlayerPrefs.SetFloat("Health", health); 
     }
     private void OnMouseDown()
     {
