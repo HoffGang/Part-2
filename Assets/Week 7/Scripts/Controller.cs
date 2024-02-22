@@ -3,14 +3,25 @@ using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Controller : MonoBehaviour
 {
+    public static int score = 0;
+    public TextMeshProUGUI scoreText;
     public Slider chargeSlider;
     float charge;
     public float maxCharge;
     Vector2 direction;
     public static Player CurrentSelection { get; private set; }
+
+   void Start()
+    {
+        scoreText = GetComponent<TextMeshProUGUI>();
+    }
+
+
+
     public static void SetCurrentSelection(Player player)
     {
       if(CurrentSelection != null)
@@ -30,7 +41,7 @@ CurrentSelection.Selected(true);
             CurrentSelection.Move(direction);
             direction = Vector2.zero;
            // Debug.Log("This thing is working");
-        }  
+        }
     }
 
 
@@ -54,5 +65,8 @@ CurrentSelection.Selected(true);
             direction = ((Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) - (Vector2)CurrentSelection.transform.position).normalized * charge;
            // Debug.Log(direction);
         }
+
+        scoreText.text = "SCORE : " + score;
     }
+
 }
