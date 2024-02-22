@@ -28,8 +28,6 @@ public class Player: MonoBehaviour
         Controller.SetCurrentSelection(this);
     }
 
-
-
     public void Selected(bool isSelected)
     {
         if (isSelected)
@@ -47,6 +45,7 @@ public class Player: MonoBehaviour
        public void Move(Vector2 direction)
         {
             rb.AddForce(direction * speed, ForceMode2D.Impulse);
+        Debug.Log (direction * speed);
         }
 }
 

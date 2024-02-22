@@ -20,7 +20,7 @@ public class Controller : MonoBehaviour
 
 CurrentSelection = player;
 CurrentSelection.Selected(true);
-
+      //  Debug.Log(CurrentSelection.name);
     }
 
     private void FixedUpdate()
@@ -29,6 +29,7 @@ CurrentSelection.Selected(true);
         {
             CurrentSelection.Move(direction);
             direction = Vector2.zero;
+           // Debug.Log("This thing is working");
         }  
     }
 
@@ -51,6 +52,7 @@ CurrentSelection.Selected(true);
         if (Input.GetKeyUp(KeyCode.Space))
         {
             direction = ((Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) - (Vector2)CurrentSelection.transform.position).normalized * charge;
+           // Debug.Log(direction);
         }
     }
 }
