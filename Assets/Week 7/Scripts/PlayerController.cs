@@ -31,7 +31,9 @@ public class Controller : MonoBehaviour
 
 CurrentSelection = player;
 CurrentSelection.Selected(true);
-      //  Debug.Log(CurrentSelection.name);
+        // GoalkeeperController.singleton.selectedPlayer = player.transform;
+        // Debug.Log(CurrentSelection.name);
+        GoalkeeperController.singleton.SelectPlayer(player.transform);
     }
 
     private void FixedUpdate()
