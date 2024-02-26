@@ -5,7 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Week 4/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Point and click/Scenes/Game Screen.unity
+    guid: fd9fdba84133d8045b8bbcc31d48605f
+  - enabled: 1
+    path: Assets/Point and click/Scenes/GameOver.unity
+    guid: 9d8771f5d0003fd4abcd094da07dfaaf
+  - enabled: 1
+    path: Assets/Point and click/Scenes/YouWin.unity
+    guid: a1d392316a5cf9543a6a71356a979a11
   m_configObjects: {}
