@@ -103,7 +103,7 @@ public class Koopa : MonoBehaviour
         {
             Destroy(gameObject);
             anim.SetBool("enemyHurt", true);
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
              
     }
